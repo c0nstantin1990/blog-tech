@@ -1,0 +1,205 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+button {
+  background-color: #007bff;
+  border: 0;
+  padding: 8px 16px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Form elements */
+textarea,
+input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border: 1px solid #007bff;
+}
+
+/* Page layout */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+header {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #800000;
+  color: white;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  padding: 8px 16px;
+  border: 2px outset #7d7d7d;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  box-shadow: 5px 2px 5px darkgrey;
+}
+
+main {
+  padding: 16px;
+}
+
+nav {
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  color: #555;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.btn-no-style {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 100%;
+  font-weight: bold;
+  transition: color 0.2s;
+  margin-left: 16px;
+}
+
+.btn-no-style:hover {
+  color: #0056b3;
+}
+
+/* Post styles */
+.post {
+  margin-bottom: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.post .title {
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #888;
+  background-color: #800000;
+  color: white;
+  padding: 8px;
+  border-radius: 5px 5px 0 0;
+}
+
+.post .title span {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.post .meta {
+  font-size: 90%;
+  margin-bottom: 8px;
+  opacity: 0.6;
+}
+
+.edit-link {
+  display: block;
+  margin-top: -16px;
+}
+
+/* Comment styles */
+.comment-form {
+  margin-bottom: 16px;
+}
+
+.comment {
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.comment:nth-child(odd) {
+  background-color: #f0f5ff;
+}
+
+.comment .meta {
+  font-size: 90%;
+  margin-bottom: 4px;
+  opacity: 0.6;
+}
+
+/* New post and edit post form styles */
+.new-post-form input,
+.edit-post-form input,
+.new-post-form textarea,
+.edit-post-form textarea {
+  width: 100%;
+}
+
+.new-post-form textarea,
+.edit-post-form textarea {
+  min-height: 100px;
+}
+
+/* Button styles */
+.upvote-btn {
+  background-color: #197d0f;
+}
+
+.upvote-btn:hover {
+  background-color: #1f9c13;
+}
+
+.delete-post-btn {
+  background-color: #d41414;
+}
+
+.delete-post-btn:hover {
+  background-color: #ff643d;
+}
+
+/* Row and column layout */
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  padding: 16px;
+}
