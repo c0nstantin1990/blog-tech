@@ -2,39 +2,32 @@ const { User } = require("../models");
 
 const userData = [
   {
-    username: "Alice",
-    email: "alice@example.com",
-    password: "alice1234",
+    username: "AliceSmith",
+    email: "alice.smith@example.com",
+    password: "a1S@securePwd",
   },
   {
-    username: "Bob",
-    email: "bob@example.com",
-    password: "bob1234",
+    username: "BobJohnson",
+    email: "bob.johnson@example.com",
+    password: "B0b@securePwd",
   },
   {
-    username: "Charlie",
-    email: "charlie@example.com",
-    password: "charlie1234",
+    username: "CharlieBrown",
+    email: "charlie.brown@example.com",
+    password: "C#b@securePwd",
   },
   {
-    username: "Eve",
-    email: "eve@example.com",
-    password: "eve1234",
+    username: "DianaJohnson",
+    email: "diana.johnson@example.com",
+    password: "D!ana@securePwd",
   },
   {
-    username: "Grace",
-    email: "grace@example.com",
-    password: "grace1234",
+    username: "EllaGarcia",
+    email: "ella.garcia@example.com",
+    password: "3lla@securePwd",
   },
 ];
 
-const seedUsers = async () => {
-  try {
-    await User.bulkCreate(userData);
-    console.log("Users seeded successfully!");
-  } catch (error) {
-    console.error("Error seeding users:", error);
-  }
-};
+const seedUsers = () => User.bulkCreate(userData);
 
 module.exports = seedUsers;

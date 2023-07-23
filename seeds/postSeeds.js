@@ -2,56 +2,37 @@ const { Post } = require("../models");
 
 const postData = [
   {
-    title: "JavaScript: The Language of the Web",
+    title: "Excited about JavaScript!",
     post_text:
-      "JavaScript is a versatile and powerful programming language that runs on the client-side as well as the server-side with Node.js.",
+      "JavaScript is such a versatile language, perfect for both frontend and backend development. I can't wait to finish this BootCamp and get a job.",
     user_id: 1,
   },
   {
-    title: "The Beauty of Clean Code",
+    title: "Python's Simplicity",
     post_text:
-      "Writing clean and maintainable code is crucial for every programmer. It leads to better collaboration and easier debugging.",
-    user_id: 1,
-  },
-  {
-    title: "The Evolution of Web Development",
-    post_text:
-      "From simple HTML pages to complex web applications, web development has evolved significantly over the years with the introduction of new technologies and frameworks.",
+      "Python's simplicity and readability make it an excellent language for beginners to start programming. Handlebars partials help you with avoiding to write repetitive code.",
     user_id: 4,
   },
   {
-    title: "Database Design: Building Efficient Schemas",
+    title: "C++ for Competitive Programming",
     post_text:
-      "Creating well-designed database schemas is essential for optimized data storage and retrieval in applications.",
-    user_id: 5,
-  },
-  {
-    title: "Building Scalable APIs with Node.js",
-    post_text:
-      "Node.js provides an excellent platform for building scalable and performant APIs to handle a large number of requests concurrently.",
+      "I'm amazed by the power and performance of C++ in competitive programming contests. I love every single form potatoes can be made.",
     user_id: 2,
   },
   {
-    title: "The Power of Algorithms",
+    title: "Functional Programming with Haskell",
     post_text:
-      "Understanding and implementing efficient algorithms is crucial for solving complex computational problems and improving application performance.",
+      "Functional programming in Haskell has completely changed the way I think about solving problems. Working with databases in SQL can be challenging but rewarding when you get the queries right.",
     user_id: 3,
   },
   {
-    title: "Exploring Artificial Intelligence in Programming",
+    title: "Understanding SQL and Security",
     post_text:
-      "AI and machine learning are transforming the world of programming, enabling developers to build intelligent applications and systems.",
-    user_id: 6,
+      "Working with databases in SQL can be challenging but rewarding when you get the queries right. Authorization refers to rules that determine who is allowed to do what. E.g. Adam may be authorized to create and delete databases, while Usama is only authorized to read. The two concepts are completely orthogonal and independent, but both are central to security design, and the failure to get either one correct opens up the avenue to compromise.",
+    user_id: 5,
   },
 ];
 
-const seedPosts = async () => {
-  try {
-    await Post.bulkCreate(postData);
-    console.log("Posts seeded successfully.");
-  } catch (err) {
-    console.log("Error seeding posts:", err);
-  }
-};
+const seedPosts = () => Post.bulkCreate(postData);
 
 module.exports = seedPosts;

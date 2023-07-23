@@ -7,6 +7,7 @@ Comment.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
@@ -34,9 +35,9 @@ Comment.init(
   },
   {
     sequelize,
-    modelName: "comment",
-    timestamps: true,
+    freezeTableName: true,
     underscored: true,
+    modelName: "comment",
   }
 );
 

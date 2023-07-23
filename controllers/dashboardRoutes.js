@@ -2,10 +2,9 @@ const router = require("express").Router();
 const { Post, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
-// Get user's posts
 router.get("/", withAuth, async (req, res) => {
   try {
-    const posts = await Post.findAll({
+    const dbPostData = await Post.findAll({
       where: {
         user_id: req.session.user_id,
       },
@@ -32,17 +31,17 @@ router.get("/", withAuth, async (req, res) => {
       ],
     });
 
+    const posts = dbPostData.map((post) => post.get({ plain: true }));
     res.render("dashboard", { posts, loggedIn: true });
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json(err);
   }
 });
 
-// Get edit post form by ID
 router.get("/edit/:id", withAuth, async (req, res) => {
   try {
-    const post = await Post.findOne({
+    const dbPostData = await Post.findOne({
       where: {
         id: req.params.id,
       },
@@ -69,36 +68,37 @@ router.get("/edit/:id", withAuth, async (req, res) => {
       ],
     });
 
-    if (!post) {
+    if (!dbPostData) {
       res.status(404).json({ message: "No post found with this id" });
       return;
     }
 
-    res.render("edit-post", { post, loggedIn: true });
+    const post = dbPostData.get({ plain: true });
+    res.render("editPost", { post, loggedIn: true });
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json(err);
   }
 });
 
-// Get edit user form
 router.get("/edituser", withAuth, async (req, res) => {
   try {
-    const user = await User.findOne({
+    const dbUserData = await User.findOne({
       attributes: { exclude: ["password"] },
       where: {
         id: req.session.user_id,
       },
     });
 
-    if (!user) {
+    if (!dbUserData) {
       res.status(404).json({ message: "No user found with this id" });
       return;
     }
 
-    res.render("edit-user", { user, loggedIn: true });
+    const user = dbUserData.get({ plain: true });
+    res.render("editUser", { user, loggedIn: true });
   } catch (err) {
-    console.error(err);
+    console.log(err);
     res.status(500).json(err);
   }
 });
