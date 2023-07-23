@@ -1,4 +1,24 @@
 {
+  "name": "blog-tech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node seeds/index.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c0nstantin1990/blog-tech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c0nstantin1990/blog-tech/issues"
+  },
+  "homepage": "https://github.com/c0nstantin1990/blog-tech#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.7",
@@ -7,28 +27,6 @@
     "express-handlebars": "^7.1.0",
     "express-session": "^1.17.3",
     "mysql2": "^3.5.2",
-    "nodemon": "^3.0.1",
     "sequelize": "^6.32.1"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "watch": "nodemon server.js",
-    "seed": "node seeds/index.js"
-  },
-  "name": "blog-tech",
-  "description": "",
-  "version": "1.0.0",
-  "main": "server.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/c0nstantin1990/blog-tech.git"
-  },
-  "keywords": [],
-  "author": "Constantin Constantinov",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/c0nstantin1990/blog-tech/issues"
-  },
-  "homepage": "https://github.com/c0nstantin1990/blog-tech#readme"
+  }
 }
