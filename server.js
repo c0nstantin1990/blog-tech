@@ -10,7 +10,7 @@ const helpers = require("./utils/helpers");
 require("dotenv").config();
 
 const hbs = exphbs.create({ helpers });
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 
 const app = express();
 
