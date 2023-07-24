@@ -8,8 +8,9 @@ Blog Tech is a feature-rich CMS-style blog site that empowers users to effortles
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Walkthrough Video](#Deployed_website)
+- [Deployed Website](#Deployed_website)
 - [Features](#Features)
+- [Sources](#Sources)
 
 ## Installation
 
@@ -21,15 +22,15 @@ Blog Tech is a feature-rich CMS-style blog site that empowers users to effortles
 
 ## Usage
 
-![All Categories](/screenshots/all_categories.jpeg)
-![Single Product](/screenshots/single_product.jpeg)
-![Post](/screenshots/post.jpeg)
-![Update](/screenshots/update.jpeg)
-![Delete](/screenshots/delete.jpeg)
+![Main Page](/screenshots/initial.jpeg)
+![Signup](/screenshots/signup.jpeg)
+![Create Post](/screenshots/create-post.jpeg)
+![Edit Post](/screenshots/edit.jpeg)
+![Updated Main](/screenshots/updated.jpeg)
 
 GitHub Repo: https://github.com/c0nstantin1990/blog-tech
 
-## Video_Demo
+## Deployed_website
 
 Live URL: https://blog-tech-c1f378058cd2.herokuapp.com/
 
@@ -42,3 +43,7 @@ Live URL: https://blog-tech-c1f378058cd2.herokuapp.com/
 - Post Management
 - Login/Logout
 - Data Security
+
+## Sources
+
+UNCC Textbook, Stack Overflow, GitHub, Heroku.
