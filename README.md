@@ -8,9 +8,9 @@ Blog Tech is a feature-rich CMS-style blog site that empowers users to effortles
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Deployed Website](#Deployed_website)
-- [Features](#Features)
-- [Sources](#Sources)
+- [Deployed Website](#deployed_website)
+- [Features](#features)
+- [Sources](#sources)
 
 ## Installation
 
